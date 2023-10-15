@@ -185,6 +185,8 @@ for ( const usuario of objetoMuchosUsuarios){
 
 
 
+
+
 function sumarLikesDeUsuario(objetoUsuario) {
    // El parámetro "objetoUsuario" tiene una propiedad llamada "posts" que es un arreglo.
    // Este arreglo contiene objetos (post).
@@ -192,17 +194,8 @@ function sumarLikesDeUsuario(objetoUsuario) {
    // Debes sumar los likes de todos los post y retornar el resultado.
    // Tu código:
 
-let total = 0;
-for (const posts of objetoUsuario.posts){
-   total += posts.likes;
+   return objetoUsuario.posts.reduce((totalLikes, post) => totalLikes + post.likes, 0);
 }
-return total;
-  }
- 
-
-
-
-
 
 
 function agregarMetodoCalculoDescuento(objetoProducto) {
